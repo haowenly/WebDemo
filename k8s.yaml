@@ -16,3 +16,16 @@ spec:
         env:
         - name: branch
           value: <BRANCH_NAME>
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: jenkins-service
+spec:
+  selector:
+    app: jenkins-demo
+  ports:
+    - protocol: TCP
+      port: 9999
+      targetPort: 12345
