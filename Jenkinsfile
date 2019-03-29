@@ -1,4 +1,7 @@
 node{    
+    stage('Prepare') {
+        echo "0.Prepare Stage"
+    }
     stage('Clone') {
         echo "1.Clone Stage"
         git url: "https://github.com/haowenly/WebDemo.git"
